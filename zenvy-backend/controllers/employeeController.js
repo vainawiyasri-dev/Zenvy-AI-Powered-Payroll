@@ -22,7 +22,7 @@ exports.createEmployee = async (req, res) => {
       company: req.user.company
     });
 
-    // 🔑 AUTO salary structure (DEFAULT)
+    // AUTO salary structure (DEFAULT)
     const defaultSalary = {
       baseSalary: 30000,
       hra: 5000,
@@ -54,3 +54,4 @@ exports.getEmployees = async (req, res) => {
     res.status(500).json({ message: "Failed to fetch employees" });
   }
 };
+
