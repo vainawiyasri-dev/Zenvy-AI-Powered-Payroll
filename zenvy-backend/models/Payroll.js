@@ -25,7 +25,7 @@ const payrollSchema = new mongoose.Schema(
       required: true
     },
 
-    // ✅ AI FIELD 
+    // AI FIELD 
     leavePrediction: {
       type: String,
       default: "Unknown"
@@ -37,3 +37,4 @@ const payrollSchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model("Payroll", payrollSchema);
+
