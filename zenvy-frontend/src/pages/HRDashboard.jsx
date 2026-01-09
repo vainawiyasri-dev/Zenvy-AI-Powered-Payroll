@@ -54,7 +54,7 @@ const HRDashboard = () => {
   try {
     await api.post("/payroll/run", { month: payrollMonth });
     alert("Payroll processed");
-    fetchPayrolls(); // 🔑 THIS WAS MISSING
+    fetchPayrolls(); 
   } catch (err) {
     console.error(err);
     alert(err.response?.data?.message || "Payroll failed");
@@ -194,3 +194,4 @@ const HRDashboard = () => {
 };
 
 export default HRDashboard;
+
