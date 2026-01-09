@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("role");
-    setRole(null); // ✅ FIX: removed invalid setToken
+    setRole(null); 
   };
 
   return (
@@ -25,3 +25,4 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => useContext(AuthContext);
+
