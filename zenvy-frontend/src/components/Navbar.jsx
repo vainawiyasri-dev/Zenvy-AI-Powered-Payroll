@@ -24,7 +24,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     logout();
-    navigate("/"); // ✅ redirect to login
+    navigate("/"); // redirect to login
   };
 
   return (
@@ -38,3 +38,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
