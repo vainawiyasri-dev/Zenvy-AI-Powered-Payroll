@@ -13,7 +13,7 @@ const EmployeeDashboard = () => {
       setAttendance(res.data);
     } catch (err) {
       console.error("Failed to fetch attendance:", err);
-      setAttendance([]); // clear on error
+      setAttendance([]);  // clear on error
     }
   };
 
@@ -102,3 +102,4 @@ const EmployeeDashboard = () => {
 };
 
 export default EmployeeDashboard;
+
