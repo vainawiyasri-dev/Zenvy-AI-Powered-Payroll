@@ -90,7 +90,28 @@
 
 ---
 
-## 🚀 Deployment
-* **Frontend:** Netlify / Vercel
-* **Backend:** Render / Heroku
-* **Database:** MongoDB Atlas
+## 🔒 Security & Deployment
+
+* **Authentication:** Password hashing via `bcrypt` and session management via `JWT`.
+* **Data Isolation:** All database queries are scoped by `companyId` to prevent cross-tenant data leaks.
+* **Deployment:** * **Frontend:** Netlify
+    * **Backend:** Render
+    * **Database:** MongoDB Atlas
+
+---
+
+## 🔮 Future Enhancements
+* [ ] Integration of real Machine Learning models for deeper AI insights.
+* [ ] Automated PDF generation for payslips.
+* [ ] Performance-based salary analytics and charts.
+* [ ] Real-time notification system (Email/SMS).
+
+---
+
+## 💻 Installation
+
+1. **Clone the repo:** `git clone https://github.com/username/zenvy.git`
+2. **Install Backend Dependencies:** `cd backend && npm install`
+3. **Install Frontend Dependencies:** `cd frontend && npm install`
+4. **Configure Environment:** Create a `.env` file with `MONGO_URI` and `JWT_SECRET`.
+5. **Run App:** `npm start`
