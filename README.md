@@ -5,6 +5,7 @@
 
 **ZENVY** is a full‑stack, AI‑assisted Payroll Management System. It supports multi‑company (multi‑tenant) architecture with strict data isolation, role‑based access control, and automated salary computation.
 
+
 ---
 
 
@@ -76,7 +77,7 @@ The system is built for scalability, separating the concern of UI, Logic, and In
 
 ---
 
-## 🧠 AI & Payroll Logic
+## 🤖 AI & Payroll Logic
 
 ### Calculation Formula
 
@@ -143,14 +144,17 @@ cd zenvy && npm run install-all
 cd backend && npm install
 ```
 ### 3. Install Frontend Dependencies:
-
-cd frontend && npm install`
-
+```bash
+cd frontend && npm install
+```
 ### 4. Configure Environment:
-Create a `.env` file with `MONGO_URI` and `JWT_SECRET`.
-
+```bash
+Create a .env file with MONGO_URI and JWT_SECRET.
+```
 ### 5. Run App:
-`npm start`
+```bash
+npm start
+```
 
 
 
