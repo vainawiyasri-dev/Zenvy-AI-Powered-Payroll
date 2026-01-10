@@ -7,15 +7,25 @@
 
 ---
 
+## 🌟 Key Highlights
+* 🛡️ **Enterprise Security:** JWT-based sessions with Bcrypt encryption.
+* 🏢 **Multi-Tenancy:** Strict data scoping by `companyId`.
+* 🤖 **AI Insights:** Automated leave probability forecasting.
+* 📊 **Role-Based Dashboards:** Custom views for Admins, HR, and Employees.
+
+---
+
 ## 🏗️ System Architecture
+The system is built for scalability, separating the concern of UI, Logic, and Intelligence.
+
 
 | Layer | Technology | Responsibility |
 | :--- | :--- | :--- |
-| **Frontend** | React, Axios | UI rendering, user interaction, API consumption |
-| **Backend** | Node.js, Express | Business logic, payroll calculation, security |
-| **Database** | MongoDB | Persistent data storage |
-| **AI Service** | Utility Module | Predictive insights (Leave probability) |
-| **Auth Layer** | JWT, bcrypt | Secure authentication & authorization |
+| **Frontend** | `React.js` | Dynamic UI & State Management |
+| **Backend** | `Node.js` / `Express` | API Orchestration & Business Logic |
+| **Database** | `MongoDB` | Document-based Scalable Storage |
+| **Intelligence** | `AI Module` | Predictive Analytics Engine |
+| **Security** | `JWT` | Stateless Authentication |
 
 ---
 
@@ -78,100 +88,6 @@
 
 ---
 
-## 🛠️ API Reference
-
-| Method | Endpoint | Role | Purpose |
-| :--- | :--- | :--- | :--- |
-| `POST` | `/auth/login` | All | Secure Authentication |
-| `POST` | `/employees` | HR | Create new employee profile |
-| `POST` | `/attendance` | HR | Update monthly attendance |
-| `POST` | `/payroll/run` | HR | Execute payroll & AI engine |
-| `GET` | `/payroll/me` | Employee | View personal salary slips |
-
----
-
-## 🔒 Security & Deployment
-
-* **Authentication:** Password hashing via `bcrypt` and session management via `JWT`.
-* **Data Isolation:** All database queries are scoped by `companyId` to prevent cross-tenant data leaks.
-* **Deployment:** * **Frontend:** Netlify
-    * **Backend:** Render
-    * **Database:** MongoDB Atlas
-
----
-
-## 🔮 Future Enhancements
-* [ ] Integration of real Machine Learning models for deeper AI insights.
-* [ ] Automated PDF generation for payslips.
-* [ ] Performance-based salary analytics and charts.
-* [ ] Real-time notification system (Email/SMS).
-
----
-
-## 💻 Installation
-
-1. **Clone the repo:** `git clone https://github.com/username/zenvy.git`
-2. **Install Backend Dependencies:** `cd backend && npm install`
-3. **Install Frontend Dependencies:** `cd frontend && npm install`
-4. **Configure Environment:** Create a `.env` file with `MONGO_URI` and `JWT_SECRET`.
-5. **Run App:** `npm start`
-
-# 💎 ZENVY
-### *Next-Gen AI-Powered Payroll Management*
-
-[![MERN Stack](https://img.shields.io/badge/Stack-MERN-green?style=for-the-badge)](https://mongodb.com)
-[![Build](https://img.shields.io/badge/Build-Production--Ready-blue?style=for-the-badge)](https://render.com)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
-**ZENVY** is a high-performance, full‑stack Payroll Management System. Designed for the modern enterprise, it leverages a **Multi-Tenant Architecture** to serve multiple companies within a single deployment, ensuring total data isolation and AI-driven workforce insights.
-
----
-
-## 🌟 Key Highlights
-* 🛡️ **Enterprise Security:** JWT-based sessions with Bcrypt encryption.
-* 🏢 **Multi-Tenancy:** Strict data scoping by `companyId`.
-* 🤖 **AI Insights:** Automated leave probability forecasting.
-* 📊 **Role-Based Dashboards:** Custom views for Admins, HR, and Employees.
-
----
-
-## 🏗️ System Architecture
-The system is built for scalability, separating the concern of UI, Logic, and Intelligence.
-
-
-
-| Layer | Technology | Responsibility |
-| :--- | :--- | :--- |
-| **Frontend** | `React.js` | Dynamic UI & State Management |
-| **Backend** | `Node.js` / `Express` | API Orchestration & Business Logic |
-| **Database** | `MongoDB` | Document-based Scalable Storage |
-| **Intelligence** | `AI Module` | Predictive Analytics Engine |
-| **Security** | `JWT` | Stateless Authentication |
-
----
-
-## 🗄️ Database Design
-The schema is optimized for relational consistency within a NoSQL environment.
-
-
-
-<details>
-<summary>📂 <b>View Detailed Collections (Tables)</b></summary>
-
-### 1. Companies & Users
-* **Companies:** Stores `name`, `taxId`, and registration metadata.
-* **Users:** Handles credentials with **Role-Based Access Control (RBAC)**: `ADMIN`, `HR`, or `EMPLOYEE`.
-
-### 2. Attendance & Salary
-* **Attendance:** Monthly tracking of `daysPresent` linked to a specific company/user.
-* **Salary Components:** Granular breakdown of `baseSalary`, `HRA`, `Bonuses`, and `Deductions`.
-
-### 3. Payroll (The AI Engine)
-* **Final Output:** Stores `netSalary` and the **AI Prediction** string.
-</details>
-
----
-
 ## 🧠 AI & Calculation Logic
 
 ### 📈 The Formula
@@ -187,6 +103,7 @@ Our utility module analyzes attendance patterns to flag potential workforce gaps
 
 ---
 
+
 ## 🛠️ API Reference (REST)
 
 | Method | Endpoint | Role | Purpose |
@@ -199,13 +116,23 @@ Our utility module analyzes attendance patterns to flag potential workforce gaps
 
 ---
 
+
 ## 🔒 Security & Deployment
 
-* **Data Integrity:** All queries are filtered through a `tenantHandler` middleware to ensure no company can ever access another company's records.
-* **Infrastructure:**
+* **Authentication:** Password hashing via `bcrypt` and session management via `JWT`.
+* **Data Isolation:** All database queries are scoped by `companyId` to prevent cross-tenant data leaks.
+* **Deployment** **Infrastructure:**
     * **Frontend:** Hosted on **Netlify** (Global CDN).
     * **Backend:** Managed on **Render** (Auto-scaling).
     * **Database:** **MongoDB Atlas** (Cloud Clusters).
+
+---
+
+## 🔮 Future Enhancements
+* [ ] Integration of real Machine Learning models for deeper AI insights.
+* [ ] Automated PDF generation for payslips.
+* [ ] Performance-based salary analytics and charts.
+* [ ] Real-time notification system (Email/SMS).
 
 ---
 
@@ -215,3 +142,11 @@ Our utility module analyzes attendance patterns to flag potential workforce gaps
 ```bash
 git clone [https://github.com/username/zenvy.git](https://github.com/username/zenvy.git)
 cd zenvy && npm run install-all
+2. **Install Backend Dependencies:** `cd backend && npm install`
+3. **Install Frontend Dependencies:** `cd frontend && npm install`
+4. **Configure Environment:** Create a `.env` file with `MONGO_URI` and `JWT_SECRET`.
+5. **Run App:** `npm start`
+
+
+
+
