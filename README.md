@@ -133,14 +133,24 @@ Our utility module analyzes attendance patterns to flag potential workforce gaps
 
 ## 💻 Installation & Setup
 
-### 1. Clone & Install
+### 1.Clone & Install
 ```bash
 git clone [https://github.com/username/zenvy.git](https://github.com/username/zenvy.git)
 cd zenvy && npm run install-all
-2. Install Backend Dependencies: `cd backend && npm install`
-3. Install Frontend Dependencies: `cd frontend && npm install`
-4. Configure Environment: Create a `.env` file with `MONGO_URI` and `JWT_SECRET`.
-5. Run App:`npm start`
+```
+### 2.Install Backend Dependencies:
+
+`cd backend && npm install`
+
+### 3.Install Frontend Dependencies:
+
+`cd frontend && npm install`
+
+### 4.Configure Environment:
+Create a `.env` file with `MONGO_URI` and `JWT_SECRET`.
+
+### 5.Run App:
+`npm start`
 
 
 
