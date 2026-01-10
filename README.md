@@ -7,11 +7,13 @@
 
 ---
 
+
 ## 🌟 Key Highlights
 * 🛡️ **Enterprise Security:** JWT-based sessions with Bcrypt encryption.
 * 🏢 **Multi-Tenancy:** Strict data scoping by `companyId`.
 * 🤖 **AI Insights:** Automated leave probability forecasting.
 * 📊 **Role-Based Dashboards:** Custom views for Admins, HR, and Employees.
+
 
 ---
 
@@ -77,8 +79,12 @@ The system is built for scalability, separating the concern of UI, Logic, and In
 ## 🧠 AI & Payroll Logic
 
 ### Calculation Formula
-* **Gross Salary** = Base Salary + HRA + Bonus
-* **Net Salary** = (Gross Salary / 30 × Days Present) − Deductions
+
+ZENVY automates the payroll run using a standardized industrial formula:
+
+$$Gross\ Salary = Base\ Salary + HRA + Bonus$$
+$$Net\ Salary = \left(\frac{Gross\ Salary}{30} \times Days\ Present\right) - Deductions$$
+
 
 ### AI Leave Prediction Logic
 | Condition | Prediction |
@@ -86,17 +92,6 @@ The system is built for scalability, separating the concern of UI, Logic, and In
 | Days Present < 20 | **High** leave probability |
 | Days Present ≥ 20 | **Low** leave probability |
 
----
-
-## 🧠 AI & Calculation Logic
-
-### 📈 The Formula
-ZENVY automates the payroll run using a standardized industrial formula:
-
-$$Gross\ Salary = Base\ Salary + HRA + Bonus$$
-$$Net\ Salary = \left(\frac{Gross\ Salary}{30} \times Days\ Present\right) - Deductions$$
-
-### 🔮 AI Leave Prediction
 Our utility module analyzes attendance patterns to flag potential workforce gaps:
 > [!TIP]
 > **Logic:** If an employee's presence falls below **20 days**, the AI flags a **"High Probability"** for leave in the following cycle, allowing HR to plan resources proactively.
@@ -139,8 +134,10 @@ Our utility module analyzes attendance patterns to flag potential workforce gaps
 ## 💻 Installation & Setup
 
 ### 1. Clone & Install
-```bash
+``bash
 git clone [https://github.com/username/zenvy.git](https://github.com/username/zenvy.git)
+``bash
+
 cd zenvy && npm run install-all
 2. **Install Backend Dependencies:** `cd backend && npm install`
 3. **Install Frontend Dependencies:** `cd frontend && npm install`
